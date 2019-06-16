@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+          <ion-back-button defaultHref=''></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      {{ title }} de Contatos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Nome</ion-label>
+    <ion-input [(ngModel)]="user.name" name="name" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Username</ion-label>
+    <ion-input [(ngModel)]="user.username" name="username"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-input [(ngModel)]="user.email" name="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Celular ou Telefone</ion-label>
+    <ion-input [(ngModel)]="user.phone" name="phone"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password" name="password"></ion-input>
+  </ion-item>
+  <ion-button (click)="submit()" expand="full">{{ title }}</ion-button>
+  <ion-button *ngIf="flagEdit" (click)="delete()" expand="full">Delete</ion-button>
+</ion-content>
